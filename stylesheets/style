@@ -218,6 +218,22 @@ table {
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
+@media only screen and (max-width: 1200px) {
+  body {
+    background-position: -360px 0,center !important; }
+
+  aside {
+    left: -360px !important; }
+
+  #fixed {
+    left: 15px !important; }
+
+  #rightside {
+    left: 90px !important;
+    min-width: 400px !important; }
+
+  #optional {
+    display: none; } }
 body {
   background-image: url("../images/grey.png"), url("../images/pattern.svg");
   background-repeat: repeat-y,no-repeat;
@@ -381,7 +397,7 @@ body {
   text-decoration: underline !important; }
 
 .articleimage {
-  height: 450px; }
+  max-width: 100%; }
 
 .ArticleTags {
   float: right; }
