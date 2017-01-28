@@ -218,7 +218,7 @@ table {
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
-@media only screen and (min-width: 50px) and (max-width: 592px) {
+@media only screen and (min-width: 50px) and (max-width: 593px) {
   body {
     background-position: -360px 0,center !important; }
 
