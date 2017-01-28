@@ -218,7 +218,21 @@ table {
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 320px) and (max-width: 592px) {
+  body {
+    background-position: -360px 0,center !important; }
+
+  #fixed, #rightfixed, #scrolltop {
+    display: none; }
+
+  aside {
+    display: none !important; }
+
+  #rightside {
+    left: 0px !important;
+    max-width: 100% !important;
+    min-width: 100% !important; } }
+@media only screen and (min-width: 593px) and (max-width: 1200px) {
   body {
     background-position: -360px 0,center !important; }
 
