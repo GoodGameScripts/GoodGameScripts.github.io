@@ -830,6 +830,9 @@ ul li input[type=checkbox]:checked ~ i:after {
   100% {
     transform-origin: top center;
     transform: rotateX(0deg); } }
+#MMinimize {
+  margin-bottom: 15px; }
+
 .flip-horizontal {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
