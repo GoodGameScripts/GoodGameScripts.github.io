@@ -472,6 +472,12 @@ $( window ).ready(function() {
     window.location.href = articleUrl;
     });
 
+$( ".MSide" ).click(function() {
+$("aside").toggleClass("showaside");
+$("body").toggleClass("showsidenav");
+$("#fixed").toggleClass("fixed2");
+$("#rightside").toggleClass("mrightside");
+});
 
 $( "#minimize" ).click(function() {
     $( "aside" ).toggleClass("hideaside")

@@ -218,36 +218,6 @@ table {
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
-@media only screen and (min-width: 50px) and (max-width: 593px) {
-  body {
-    background-position: -360px 0,center !important; }
-
-  #fixed, #rightfixed, #scrolltop {
-    display: none; }
-
-  aside {
-    display: none !important; }
-
-  #rightside {
-    left: 0px !important;
-    max-width: 100% !important;
-    min-width: 100% !important; } }
-@media only screen and (min-width: 593px) and (max-width: 1200px) {
-  body {
-    background-position: -360px 0,center !important; }
-
-  aside {
-    left: -360px !important; }
-
-  #fixed {
-    left: 15px !important; }
-
-  #rightside {
-    left: 90px !important;
-    min-width: 400px !important; }
-
-  #optional {
-    display: none; } }
 body {
   background-image: url("../images/grey.png"), url("../images/pattern.svg");
   background-repeat: repeat-y,no-repeat;
@@ -260,6 +230,9 @@ body {
 
 .hidesidenav {
   background-position: -360px 0,center !important; }
+
+.showsidenav {
+  background-position: 0 0,center; }
 
 * {
   box-sizing: border-box;
@@ -312,6 +285,9 @@ body {
 .articleOnhide {
   left: 90px !important; }
 
+.mrightside {
+  left: 350px !important; }
+
 .articleIcon {
   width: 60px;
   height: 60px;
@@ -335,6 +311,12 @@ body {
   border-radius: 20%;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 1; }
+
+.MSide {
+  display: none; }
+
+.fixed2 {
+  left: 320px !important; }
 
 #fixed {
   position: fixed;
@@ -682,6 +664,8 @@ aside {
   left: 0;
   bottom: 0;
   width: 350px;
+  background-color: #333;
+  z-index: 10;
   padding: 0;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -691,6 +675,11 @@ aside {
 
 .hideaside {
   left: -360px; }
+
+.showaside {
+  left: 0 !important;
+  background-color: #333;
+  z-index: 10; }
 
 .navelement {
   width: 90%;
@@ -841,6 +830,73 @@ ul li input[type=checkbox]:checked ~ i:after {
   100% {
     transform-origin: top center;
     transform: rotateX(0deg); } }
+@media only screen and (min-width: 50px) and (max-width: 593px) {
+  body {
+    background-position: -360px 0, center; }
+
+  #rightfixed, #scrolltop {
+    display: none; }
+
+  .articleIcon {
+    display: none; }
+
+  #fixed {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    z-index: 9; }
+
+  aside {
+    left: -360px; }
+
+  .MSide {
+    display: block; }
+
+  .articleIcon {
+    opacity: 1;
+    border: none; }
+
+  .articleIcon:hover {
+    opacity: 1;
+    background-color: #333;
+    border-radius: 50%; }
+
+  #rightside {
+    left: 0px;
+    min-width: 450px;
+    width: 100%;
+    max-width: 100%; } }
+@media only screen and (min-width: 593px) and (max-width: 1200px) {
+  body {
+    background-position: -360px 0,center; }
+
+  aside {
+    left: -360px;
+    z-index: 10; }
+
+  .articleIcon {
+    opacity: 1;
+    background-color: #333; }
+
+  .articleIcon:hover {
+    border: 1px solid #5ba1cf;
+    background-color: #333;
+    opacity: 1; }
+
+  #fixed {
+    position: absolute;
+    left: 15px;
+    z-index: 9; }
+
+  .MSide {
+    display: block; }
+
+  #rightside {
+    left: 90px;
+    min-width: 400px; }
+
+  #optional {
+    display: none; } }
 /* FONT PATH
  * -------------------------- */
 @font-face {
