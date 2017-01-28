@@ -16,16 +16,25 @@ $( window ).ready(function() {
     window.location.href = articleUrl;
     });
 
-$( ".MSide" ).click(function() {
+$("#MMinimize" ).click(function() {
 $("aside").toggleClass("showaside");
 $("body").toggleClass("showsidenav");
 $("#fixed").toggleClass("fixed2");
 $("#rightside").toggleClass("mrightside");
+$("#MMinimize i" ).toggleClass("flip-horizontal");
+var $el = $(this);
+var title = $(this).prop('title');
+if(title === 'Minimize Sidebar'){
+  $el.prop('title', 'Show');
+} else {
+  $el.prop('title', 'Hide');
+}
+
 });
 
 $( "#minimize" ).click(function() {
     $( "aside" ).toggleClass("hideaside")
-    $("#minimizer").toggleClass("fa-angle-double-right");
+    $("#MinimizeIcon").toggleClass("fa-angle-double-right");
     $("#fixed").toggleClass("fixed");
     $("#rightside").toggleClass("articleOnhide");
     $("body").toggleClass("hidesidenav");

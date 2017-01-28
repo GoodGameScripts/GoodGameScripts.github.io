@@ -830,6 +830,16 @@ ul li input[type=checkbox]:checked ~ i:after {
   100% {
     transform-origin: top center;
     transform: rotateX(0deg); } }
+.flip-horizontal {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: fliph;
+  /*IE*/
+  filter: fliph;
+  /*IE*/ }
+
 @media only screen and (min-width: 50px) and (max-width: 593px) {
   body {
     background-position: -360px 0, center; }
@@ -842,12 +852,15 @@ ul li input[type=checkbox]:checked ~ i:after {
 
   #fixed {
     position: absolute;
-    left: -30px;
+    left: -20px;
     top: 0;
-    z-index: 9; }
+    z-index: 15; }
 
   aside {
     left: -360px; }
+
+  .fixed2 {
+    left: 0 !important; }
 
   .MSide {
     display: block; }
@@ -859,7 +872,8 @@ ul li input[type=checkbox]:checked ~ i:after {
   .articleIcon:hover {
     opacity: 1;
     background-color: #333;
-    border-radius: 50%; }
+    border-radius: 50%;
+    border: none; }
 
   #rightside {
     left: 0px;
