@@ -880,6 +880,7 @@ ul li input[type=checkbox]:checked ~ i:after {
 
   #rightside {
     left: 0px;
+    min-width: 320px !important;
     width: 100%; } }
 @media only screen and (min-width: 593px) and (max-width: 1200px) {
   body {
