@@ -145,14 +145,14 @@ table {
 
 .awesomplete > ul > li[aria-selected="true"] {
   background: #202020;
-  color: #99cc00; }
+  color: #5ba1cf; }
 
 .awesomplete mark {
-  background: #FF9900;
-  color: whitesmoke; }
+  background: #99cc00;
+  color: black; }
 
 .awesomplete li:hover mark {
-  background: #FF9900;
+  background: #5ba1cf;
   color: whitesmoke; }
 
 .awesomplete li[aria-selected="true"] mark {
