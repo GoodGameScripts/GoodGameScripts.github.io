@@ -480,10 +480,10 @@ $("#rightside").toggleClass("mrightside");
 $("#MMinimize i" ).toggleClass("flip-horizontal");
 var $el = $(this);
 var title = $(this).prop('title');
-if(title === 'Minimize Sidebar'){
-  $el.prop('title', 'Show');
+if(title === 'Show'){
+  $el.prop('title', 'hide');
 } else {
-  $el.prop('title', 'Hide');
+  $el.prop('title', 'show');
 }
 
 });
