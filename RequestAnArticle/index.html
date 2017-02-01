@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Articles Tagged With 'TpointArray'</title>
-    <link href="../../stylesheets/style.css" rel="stylesheet" />
-    <script src="../../javascripts/all.js"></script>
+    <title>Article Request</title>
+    <link href="../stylesheets/style.css" rel="stylesheet" />
+    <script src="../javascripts/all.js"></script>
   </head>
-  <body class="tags tags_tpointarray tags_tpointarray_index">
+  <body class="RequestAnArticle RequestAnArticle_index">
 
 <div id="fixed">
 <span id="optional">
@@ -64,7 +64,7 @@
 <aside>
 
 <section class="navelement">
-<a href="/">   <img src="../../images/lion.png" alt="logo" class="center" />
+<a href="/">   <img src="../images/lion.png" alt="logo" class="center" />
 </a></section>
 
 <section class="navelement">
@@ -162,7 +162,7 @@
    <i class="check"></i>
   <h2 class="NavHeaders"><a href="#donate"> Donations</a></h2>
   <p>
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRGEDM5BMTLK2"> <img src="../../images/pp.jpg" id="payment" alt="Donate" /> </a>
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YRGEDM5BMTLK2"> <img src="../images/pp.jpg" id="payment" alt="Donate" /> </a>
   <span class="articleSummary center">If you find any of the information on this website useful,Feel free to donate.<i class="fa fa-paypal" aria-hidden="true"></i></span>
 </p>
 </li>
@@ -193,17 +193,46 @@
 <div id="rightside">
 <div class="article">
   <span  style="color:whitesmoke;font-size:12px"> <i class="fa fa-calendar" aria-hidden="true"></i>
- 1-2-2017</span>
+ Feb 1 2017</span>
   <div class="content-title">
-  <a name="top">Articles Tagged With 'TpointArray'</a>
+  <a name="top">Article Request</a>
   </div>
   <div class="content-area">
 
-        <span class="articleinfo">
-      <div style=""class="comment"><div class="commentheader"><a class="commentuser" href="/01-01-2017-basics/AllAboutTpoints/"> All About Tpoints <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-        <span class="commentdate"><i class="fa fa-calendar" aria-hidden="true"></i> <time>Jan  1 2017</time></span>
-      </div><span class="commentbody">Showing you how to use tpoints and tpoint arrays.</span></div>
-    </span>
+    <section class="articleinfo"><span id="comments">
+<h2 class="articleStep"> <a class="NavStep" name="comments">Article Request Format:
+  </a></h2>Part of script you need help on: aka banking, random, and etc.
+  Screen Shot links: img links
+  Rsps or Rs: if rsps the name and link here.
+  current script: aka http://pastebin.com/ link
+  
+  <strong>I dont code full scripts, this page is mearly to help you in a section of the script you are currently working on.
+  To request a script for a rsps, head over to the <a href="https://villavu.com/forum/forumdisplay.php?f=635">the request a rsps script thread on vilavu.com</a>
+  or <a href="https://villavu.com/forum/forumdisplay.php?f=94">the request a rs script thread on vilavu.com</a> for runescape.</strong>
+
+<span id="header"> Post the article request on <a href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/4"> this post's issue page on GitHub  <i class="fa fa-commenting" aria-hidden="true"></i></a> (you'll need a GitHub account).</span></span>
+</section>
+<script type="text/javascript">
+function loadComments(data) {
+  for (var i=0; i<data.length; i++) {
+      var cuser = data[i].user.login;
+      var cuserlink = "https://www.github.com/" + data[i].user.login;
+      var clink = "https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/4#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+      var cbody = data[i].body_html;
+      var cavatarlink = data[i].user.avatar_url;
+      var cdate =  moment(data[i].created_at).format("MM-DD-YYYY h:mm:ss");
+
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+    }
+  }
+
+ $.ajax("https://api.github.com/repos/GoodGameScripts/GoodGameScripts.github.io/issues/4/comments", {
+   headers: {Accept: "application/vnd.github.full+json"},
+   success: function(msg){
+     loadComments(msg);
+  }
+ });
+</script>
 
 
 </div>

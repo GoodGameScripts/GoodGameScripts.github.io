@@ -855,10 +855,13 @@ ul li input[type=checkbox]:checked ~ i:after {
   .articleIcon {
     display: none; }
 
+  #MMinimize {
+    background-color: transparent !important; }
+
   #fixed {
     position: absolute;
     left: -20px;
-    top: 0;
+    top: -3px;
     z-index: 15; }
 
   aside {
