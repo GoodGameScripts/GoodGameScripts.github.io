@@ -387,7 +387,8 @@ body {
   padding-top: 5px; }
 
 .articleinfo img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 .articleinfo a:link:hover {
   text-decoration: underline !important; }
