@@ -921,6 +921,9 @@ ul li input[type=checkbox]:checked ~ i:after {
 .codeblock {
   display: none; }
 
+.comment {
+  white-space: normal; }
+
 /* FONT PATH
  * -------------------------- */
 @font-face {
