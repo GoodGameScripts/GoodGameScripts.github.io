@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>GGscripts</title>
+    <title>How To create a Auto Target Client Procedure</title>
     <link href="../../stylesheets/style.css" rel="stylesheet" />
     <script src="../../javascripts/all.js"></script>
     <link href="../../stylesheets/shCoreRDark.css" rel="stylesheet" />
@@ -25,7 +25,7 @@
 </script>
   </head>
 
-  <body class="x2017 x2017_01 x2017_01_index">
+  <body class="x31-01-2017-rspsinclude x31-01-2017-rspsinclude_AutoTargetClient x31-01-2017-rspsinclude_AutoTargetClient_index">
 
 <div id="fixed">
 <span id="optional">
@@ -61,7 +61,30 @@
 </a>
 </div>
 <div id="rightfixed">
-  
+     </br>
+   <a  style="text-decoration:none !important;" href="#StringContains" > <div class="articleIcon blueclass">1 </div></a>
+   </br>
+   <a  style="text-decoration:none !important;" href="#Scanning" > <div class="articleIcon blueclass">2 </div></a>
+   </br>
+   <a  style="text-decoration:none !important;" href="#activate" > <div class="articleIcon blueclass">3 </div></a>
+     <br>
+    <a  style="text-decoration:none" title="Go To Comments"  href="#comments">
+     <div class="articleIcon blueclass">
+       <i class="fa fa-comments-o" aria-hidden="true"></i>
+     </div></a>
+     <br>
+   <a style="text-decoration:none" class="white" target="_blank" title="Post a Comments on github"  href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/3 ">
+   <div class="articleIcon blueclass">
+     <i class="fa fa-commenting" aria-hidden="true"></i>
+   </div>
+   <br>
+     </a>
+     <a style="text-decoration:none" class="white" title="RSPS Include Article List"   href="/RSPSInclude/">
+     <div class="articleIcon blueclass">
+     <i class="fa fa-file-text" aria-hidden="true"></i>
+     </div>
+     </a>
+
 </div>
 <br>
 <a  id="scrolltop" class="white" href="#top" title="Go to Top">
@@ -100,18 +123,20 @@
 <li class="navelement">
   <input type="checkbox" checked>
    <i  class="check"></i>
-  <h2 class="NavHeaders"><a href="#tags">Article Series</a></h2>
-<p>
-<a href="/BasicScripting/">  <i class="fa fa-file-text" aria-hidden="true"></i> Basic Scripting  <i class="fa fa-arrow-right" aria-hidden="true"></i>
-</a>  <span class="articleSummary">
-    The basic usage of srl-6.
-  </span>
+  <h2 class="NavHeaders"><a href="#Series"> Series: rsps include</a></h2>
+    
+  <p>
+  <span class="white"> <a href="/31-01-2017-rspsinclude/AutoTargetClient/"> How To create a Auto Target Client Procedure <i class="fa fa-arrow-right" aria-hidden="true"></i></a></span>
+    <span class="articleSummary"> Setting up a auto target procedure.</span>
+    <span class="greenclass"><i class="fa fa-calendar" aria-hidden="true"></i>
+   <time>Jan 31 2017</time>
+ </span><br><br>
+  <span class="white"><a  href="../../RSPSInclude/">
+  <i class="fa fa-file-text" aria-hidden="true"></i> Full series list  <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+  </a>
   <br>
-<a href="/RSPSInclude/">  <i class="fa fa-file-text" aria-hidden="true"></i> RSPS Include <i class="fa fa-arrow-right" aria-hidden="true"></i>
-</a>  <span class="articleSummary">
-    How to create custom function and procedures to work with a rsps.
-  </span>
 </p>
+
 </li>
 <li class="navelement">
   <input type="checkbox" checked>
@@ -198,25 +223,127 @@
 <div id="rightside">
 <div class="article">
   <span  style="color:whitesmoke;font-size:12px"> <i class="fa fa-calendar" aria-hidden="true"></i>
- </span>
+ Jan 31 2017</span>
+  <span  style="color:whitesmoke;font-size:12px;float:right;"> Series:  RSPS Include</span>
+  <span class="clr"></span>
   <div class="content-title">
-  <a name="top"></a>
+  <a name="top">How To create a Auto Target Client Procedure</a>
   </div>
   <div class="content-area">
 
-    <h1>Archive for
-    Jan 2017
-</h1>
+    <span class="articleinfo">
+<span class="articleStep"><a class="NavStep" name='idea'>The idea</a></span>
+So the idea, is to create a simba procedure that will auto target the correct client, so you don't have to use the cross-hairs in simba to do it.
+What will simba have to do to code this idea:
+  1: Create a function that finds text with in a string and returns true or false, if the string has that string in it.
+  2: Search all the current running processes for the process with the correct title, width, and height.
+  3: Set the target to the above process and activate the client, aka bring it forward.
+</span>
+<span class="articleinfo">
+<span class="articleStep"><a class="NavStep" name='StringContains'>1: Creating a string.contains function</a></span>
+<pre class="codeblock brush: pas ">
+  function string.contains(s: string): Boolean;
+  begin
+    if ((self <> '') and (s <> '')) then
+      result := (pos(s, self) > 0)
+    else
+      result := False;
+  end;
+</pre>
+code explanation:
+-We create a function string.contains ,where string is the string we are searching in, with the parameter of s, which is the string we are looking for, and set it to return a Boolean (true or false)
+-Next, we begin and say if self, the string we are searching in, and s are not equal to blank
+-Then the result are, if the position of s in self is greater then 0. Which means the string was found, the result is true.
+-After that, we simply state if it wasn't found, the result is false, and end our function.
+</span>
+<span class="articleinfo">
+<span class="articleStep"><a class="NavStep" name='Scanning'>2: Searching for the Client</a></span>
+<pre class="codeblock brush: pas ">
+procedure AutoTarget(ClientName:string);
+ var
+   processes: TSysProcArr;
+   i: integer;
+ begin
+   processes := GetProcesses();
+   writeln('Scanning for ' , ClientName;
+   for i := 0 to high(processes) do
+     if (processes[i].title.contains(ClientName)) and (processes[i].width = 765) and (processes[i].height = 525) then
+     begin
+
+     end;
+ end;
+</pre>
+code explanation:
+-We create a procedure named AutoTarget with the parameter of ClientName as a string.
+-Setup a couple of vars: processes as Tysyprocarr, and i as an integer.
+-Then, we begin our procedure and set processes to our current running processes.
+-Add some debug information, we write the line scanning for client name, in simba's debug box.
+-After that, we say for i is equal to high(processes) search for the processes with: the title that contains client, width of 765 and height of 525.
+On to the next section.
+</span>
+<span class="articleinfo">
+<span class="articleStep"><a class="NavStep" name='activate'>3: Setting target and activating the client.</a></span>
+<pre class="codeblock brush: pas ">
+procedure AutoTarget(ClientName:string);
+ var
+   processes: TSysProcArr;
+   i: integer;
+ begin
+   processes := GetProcesses();
+   writeln('Scanning for ' , ClientName;
+   for i := 0 to high(processes) do
+     if (processes[i].title.contains(ClientName)) and (processes[i].width = 765) and (processes[i].height = 525) then
+     begin
+     setTarget(processes[i]);
+     ActivateClient();
+     break;
+     end;
+ end;
+</pre>
+code explanation:
+-If simba finds the correct process then, setTarget to that process and use the srl procedure ActivateClient(), which brings the targeted client forward.
+-Then break out of the current loop.
+Now if we run the script, testing with runique, the results are:
+  <img  src="http://i.imgur.com/XCt2w0d.gif"  alt="script auto target" />
+
+</span>
+
+<section class="articleinfo"><span id="comments">
+<h2 class="articleStep"> <a class="NavStep" name="comments">Comments<i class="fa fa-comments-o" aria-hidden="true"></i>
+</a></h2><span id="header"> Want to leave a comment? Visit <a href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/3"> this post's issue page on GitHub  <i class="fa fa-commenting" aria-hidden="true"></i></a> (you'll need a GitHub account).</span></span>
+</section>
+<script type="text/javascript">
+function loadComments(data) {
+  for (var i=0; i<data.length; i++) {
+      var cuser = data[i].user.login;
+      var cuserlink = "https://www.github.com/" + data[i].user.login;
+      var clink = "https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/3#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+      var cbody = data[i].body_html;
+      var cavatarlink = data[i].user.avatar_url;
+      var cdate =  moment(data[i].created_at).format("MM-DD-YYYY h:mm:ss");
+
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+    }
+  }
+
+ $.ajax("https://api.github.com/repos/GoodGameScripts/GoodGameScripts.github.io/issues/3/comments", {
+   headers: {Accept: "application/vnd.github.full+json"},
+   success: function(msg){
+     loadComments(msg);
+  }
+ });
+</script>
 
 
-<ul>
-    <li><a href="/31-01-2017-rspsinclude/AutoTargetClient/">How To create a Auto Target Client Procedure</a> <span>Jan 31</span></li>
-    <li><a href="/26-01-2017-basics/InstallingIncludes/">Installing Includes and Plugins</a> <span>Jan 26</span></li>
-    <li><a href="/01-01-2017-basics/AllAboutTpoints/">All About Tpoints</a> <span>Jan  1</span></li>
-</ul>
+</div>
+<div style="width:90%;margin: 0 auto;padding: 0 10px 10px 10px">
+<div style="float:right; padding-bottom:10px; " class="blueclass" >
+    <i class="fa fa-tags" aria-hidden="true"></i>
+      <a href="/tags/client/">client,</a> ,
 
-
-
+</div>
+<span class="clr"></span>
+<br>
 </div>
 <span style="text-align:center;" class="endarticle greenclass center" >©
   2017
