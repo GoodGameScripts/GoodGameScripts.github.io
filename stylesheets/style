@@ -221,6 +221,7 @@ table {
 body {
   background-image: url("/images/grey.png"), url("/images/pattern.png");
   background-repeat: repeat-y,no-repeat;
+  background-color: black;
   background-attachment: fixed,fixed;
   background-position: 0 0,center;
   -webkit-background-size: auto,cover;
