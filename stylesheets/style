@@ -219,7 +219,7 @@ table {
 ## ++ Globals
 ========================================================================== */
 body {
-  background-image: url("../images/grey.png"), url("../images/pattern.svg");
+  background-image: url("/images/grey.png"), url("/images/pattern.png");
   background-repeat: repeat-y,no-repeat;
   background-attachment: fixed,fixed;
   background-position: 0 0,center;
