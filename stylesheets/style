@@ -232,6 +232,11 @@ body {
   -o-background-size: auto,cover;
   background-size: auto, cover; }
 
+body::after {
+  background-image: url("/images/grey.png"), url("/images/pattern.png");
+  content: "";
+  display: none; }
+
 .hidesidenav {
   background-position: -360px 0,center !important; }
 
