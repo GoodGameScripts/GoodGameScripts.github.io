@@ -407,6 +407,9 @@ body {
   font-size: 15px;
   font-weight: bold; }
 
+.commentdate {
+  margin-right: 9px !important; }
+
 #scrolltop {
   position: fixed;
   bottom: 15px;
