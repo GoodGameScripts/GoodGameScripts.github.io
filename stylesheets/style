@@ -218,9 +218,6 @@ table {
 /* =======================================================================
 ## ++ Globals
 ========================================================================== */
-@font-face {
-  font-family: 'Font-Awesome';
-  src: url("/fonts/fontawesome-webfont.woff2") format("woff2"), url("/fonts/fontawesome-webfont.woff") format("woff"), url("/fonts/fontawesome-webfont.eot") format("eot"), url("/fonts/fontawesome-webfont.svg") format("svg"), url("/fonts/fontawesome-webfont.ttf") format("truetype"); }
 body {
   background-image: url("/images/grey.png"), url("/images/pattern.png");
   background-repeat: repeat-y,no-repeat;
@@ -231,11 +228,6 @@ body {
   -moz-background-size: auto,cover;
   -o-background-size: auto,cover;
   background-size: auto, cover; }
-
-body::after {
-  background-image: url("/images/grey.png"), url("/images/pattern.png");
-  content: "";
-  display: none; }
 
 .hidesidenav {
   background-position: -360px 0,center !important; }
