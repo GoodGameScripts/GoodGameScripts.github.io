@@ -724,6 +724,12 @@ aside {
   padding: 5px 0;
   cursor: pointer; }
 
+#searchicon {
+  position: absolute;
+  top: 22px;
+  left: 17px;
+  color: whitesmoke; }
+
 .SubNavHeaders {
   font-size: 18px;
   display: block;
