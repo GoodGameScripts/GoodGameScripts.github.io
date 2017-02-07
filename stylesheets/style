@@ -445,6 +445,9 @@ body {
   color: #5ba1cf;
   text-decoration: none; }
 
+.blueclass:hover {
+  text-decoration: underline; }
+
 .orangeclass {
   color: #FF9900;
   font-size: 25px;
