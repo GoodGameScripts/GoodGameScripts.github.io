@@ -679,6 +679,9 @@ aside {
   -ms-transition: all 1s ease;
   transition: all 1s ease; }
 
+aside a:link:hover {
+  text-decoration: underline !important; }
+
 .hideaside {
   left: -360px; }
 
