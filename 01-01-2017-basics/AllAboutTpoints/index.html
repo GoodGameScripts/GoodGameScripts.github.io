@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
-    <title>Basic Layout of Simba</title>
+    <title>All About Tpoints</title>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js" ></script>
     <script>
   WebFont.load({
@@ -36,7 +36,7 @@
     <link rel="preload" href="../../javascripts/shBrushDelphi.js" as="script">
   </head>
 
-  <body class="x07-02-2017-basics x07-02-2017-basics_simba x07-02-2017-basics_simba_index">
+  <body class="x01-01-2017-basics x01-01-2017-basics_AllAboutTpoints x01-01-2017-basics_AllAboutTpoints_index">
 <a name="top"></a>
 
 <div class="div-fake-hidden">
@@ -85,20 +85,20 @@
 </div>
 <div id="rightfixed">
      </br>
-   <a  style="text-decoration:none !important;" href="#FunctionList" > <div class="articleIcon blueclass">1 </div></a>
+   <a  style="text-decoration:none !important;" href="#Tpoints" > <div class="articleIcon blueclass">1 </div></a>
    </br>
-   <a  style="text-decoration:none !important;" href="#MostUsedBtns" > <div class="articleIcon blueclass">2 </div></a>
+   <a  style="text-decoration:none !important;" href="#TpointArrays" > <div class="articleIcon blueclass">2 </div></a>
    </br>
-   <a  style="text-decoration:none !important;" href="#scriptarea" > <div class="articleIcon blueclass">3 </div></a>
+   <a  style="text-decoration:none !important;" href="#UsingTpoints" > <div class="articleIcon blueclass">3 </div></a>
    </br>
-   <a  style="text-decoration:none !important;" href="#debugbox" > <div class="articleIcon blueclass">4 </div></a>
+   <a  style="text-decoration:none !important;" href="#SelectingArrays" > <div class="articleIcon blueclass">4 </div></a>
      <br>
     <a  style="text-decoration:none" title="Go To Comments"  href="#comments">
      <div class="articleIcon blueclass">
        <i class="fa fa-comments-o" aria-hidden="true"></i>
      </div></a>
      <br>
-   <a style="text-decoration:none" class="white" target="_blank" title="Post a Comments on github"  href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/6 ">
+   <a style="text-decoration:none" class="white" target="_blank" title="Post a Comments on github"  href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/1 ">
    <div class="articleIcon blueclass">
      <i class="fa fa-commenting" aria-hidden="true"></i>
    </div>
@@ -321,66 +321,222 @@ How to create custom function and procedures to work with a rsps.
 <div id="rightside">
 <div class="article">
   <span  style="color:whitesmoke;font-size:12px"> <i class="fa fa-calendar" aria-hidden="true"></i>
- Feb 7 2017</span>
+ Jan 1 2017</span>
   <span  style="color:whitesmoke;font-size:12px;float:right;"> Series:  Basic Scripting</span>
   <span class="clr"></span>
   <div class="content-title">
-  Basic Layout of Simba
+  All About Tpoints
   </div>
   <div class="content-area">
 
-    <span class="articleinfo">
-<span class="articleStep"><a class="NavStep" >Simba's Layout</a></span>
-<a href="http://imgur.com/ZuAHW1n"><img src="http://i.imgur.com/ZuAHW1n.png" alt="simba's Layout" /></a>
-</span>
-<span class="articleinfo">
-<span class="articleStep"><a class="NavStep" name='FunctionList'>1: The Function List</a></span>
-<a href="http://imgur.com/DItv6WW"><img src="http://i.imgur.com/DItv6WW.png"  alt="" /></a>
-This is where you can find all the pre-built, or the curent functions in your script are at.
-To find a function, just simply click the right arrow next to the action your looking for, and it will show a list of related function.
-Example:
-I want to find some bitmap functions, so I click the right arrow.
-<a href="http://imgur.com/ET0atLw"><img src="http://i.imgur.com/ET0atLw.png"  alt="bitmap functions list" /></a>
-</span>
-<span class="articleinfo">
-<span class="articleStep"><a class="NavStep" name='MostUsedBtns'>2: Most used buttons in Simba.</a></span>
-<a href="http://imgur.com/LE7qcSW"><img src="http://i.imgur.com/LE7qcSW.png"  alt="" /></a>
-Starting from left to right:
--The play button, which runs the script.
--The color picker, which is used to get the x and y coordinates of a point, and find simple colors.
--The target button, which is used to select a client in Simba.
-</span>
-<span class="articleinfo">
-<span class="articleStep"><a class="NavStep" name='scriptarea'>3: The script area.</a></span>
-<a href="http://imgur.com/8vYshpe"><img src="http://i.imgur.com/8vYshpe.png"  alt="" /></a>
-This is where the script you want to run , or the code you are working on goes.
-</span>
-<span class="articleinfo">
-<span class="articleStep"><a class="NavStep" name='debugbox'>4: The debug box.</a></span>
-<a href="http://imgur.com/rBLFRIp"><img src="http://i.imgur.com/rBLFRIp.png"  alt="" /></a>
-This is the debug box is, it is used to debug your scripts, via the writeln function.
-Example:
-Lets Run this bit of code with the writeln function.
+        <section class="articleinfo">
+    <span class="articleStep"><a class="NavStep" name='Tpoints'>1: What are T-point?</a></span>
+    A tpoint is a single point, with in the targeted client, with x and y coordinates.
+    First, before you do anything in simba <strong>always target the client</strong>, by dragging the green cross-hairs<img src="http://i.imgur.com/3IXwmBP.png"  alt="" /> to the correct client.
+    Now back to getting a tpoint. Simply click the color picker in simba and move the mouse to the desired location.
+    <img class="articleimage  " src="http://i.imgur.com/8lWnaaf.gif"  alt="" />
+    Then the tpoint will be down in the debug box.
+    <img  src="http://i.imgur.com/olwfy5m.png"  alt="" />
+   Now to use the tpoint in a simple mouse procedure, using srl-6.
 <pre class="codeblock brush: pas ">
-  program new;
-  begin
-    writeln('Hello world');
-  end.
+ mouse(point(89,94),MOUSE_LEFT,MOUSE_ACCURATE);
 </pre>
-Results:
-<a href="http://imgur.com/rd3S3Ev"><img src="http://i.imgur.com/rd3S3Ev.png"  alt="" /></a>
-</span>
+The parameters for the mouse procedure are:
+- The point you want to more the mouse to.
+- Which mouse button.
+- How you want to move the mouse.
+<a href="http://docs.villavu.com/srl-6/mouse.html">Check out Srl-6 mouse documentation</a> for a full list of mouse related function.
+</section>
+
+  <section class="articleinfo">
+    <span class="articleStep"><a class="NavStep" name='TpointArrays'>2: What are T-point arrays</a></span>
+     Tpoint arrays are as the name states, a group of tpoints, that hold the value of different colors. Which are generally used in color finding procedures.
+     Basic usage of T-point arrays.
+     We start by using Auto color aid. To find the color we are looking for.
+     So lets start with this image.
+     <a href="http://imgur.com/RgymUqb"><img class="articleimage  " src="http://i.imgur.com/RgymUqb.png" alt="" /></a>
+     As you can see, we have a couple of blue boxes.
+     Now open open up ACA and click inside of one of those boxes, and hit markbest color. That will be the color we will store in the tpa.
+     <img class="articleimage  " src="http://i.imgur.com/7eW3Bhk.png" alt="">
+     Now to use that in a basic color finding function. We will use the etl include to debug our tpa.
+     A full list of tools with dl links can be found on the <a href="../../index.html">home page.</a>
+     The Script will look something like this.
+     <pre class="codeblock brush: pas ">
+   program findTpointArray;
+   {$i Srl-6/srl.simba}
+   {$i ETl_Lape.simba}
+   procedure findtpa();
+   var
+     bluebox: TPointArray;
+   begin //start of function
+     if FindColorsTolerance(bluebox, 13387839, getClientBounds(), 0, colorSetting(2,0, 0)) then
+     begin
+     writeln('found tpa');
+      ETL_DebugTPA(bluebox,Clred);
+     end;
+   end;//end of function
+   begin
+        etl_start();
+        Findtpa()
+   end.
+     </pre>
+     <pre class="codeblock brush: pas ">
+       program findTpointArray;
+       {$i Srl-6/srl.simba}
+       {$i ETl_Lape.simba}
+     </pre>
+  The first part of the script, we setup the program name and any includes we will be using.
+    <pre class="codeblock brush: pas ">
+    procedure findtpa();
+     var
+    bluebox: TPointArray;
+    begin
+    if FindColorsTolerance(bluebox, 13387839, getClientBounds(), 0, colorSetting(2,0, 0)) then
+    </pre>
+  In the second part of the code, we set up a procedure called findtpa().
+  Then with in that procedure we set up a couple of vars, bluebox as a TPA and setup the FindColorsTolerance function.
+    The FindcolorsTolerance parameters are:
+    - TPA to store the color
+    - The color to find
+    - The area you want to find it in
+    - The tolerance of the color
+    - and the color settings: cts, hue, and saturation, which can be found in ACA.
+<a href="http://imgur.com/wXLeCcj"><img class="articleimage  " src="http://i.imgur.com/wXLeCcj.png"  alt="" /></a>
+     <pre class="codeblock brush: pas ">
+       begin
+        writeln('found tpa');
+        ETL_DebugTPA(bluebox,Clred);
+       end;
+     </pre>
+  In the third part of the code, we say if the TPA is found then write the line found TPA in the debug box.
+  Then have the etl include to debug our TPA in the color red.
+    <pre class="codeblock brush: pas ">
+    begin
+     etl_start();
+     Findtpa()
+    end.
+    </pre>
+    In the last part of the code, we start the etl include and add the findtpa procedure down in the main loop.
+
+    Results:
+    <a href="http://imgur.com/yZJ3iQn"><img  class="articleimage  " src="http://i.imgur.com/yZJ3iQn.png"  alt="" /></a>
+</section>
+
+    <section class="articleinfo">
+        <span class="articleStep"><a class="NavStep" name='UsingTpoints'>3: What are  T2DPointArrays?</a></span>
+        A  T2DPointArray is basically a way to split up T-point arrays.
+      <pre class="codeblock brush: pas ">
+  program findTpointArray;
+  {$i Srl-6/srl.simba}
+  {$i ETl_Lape.simba}
+  procedure findtpa();
+  var
+    bluebox: TPointArray;
+    blueboxes: T2DPointArray;
+  begin
+    if FindColorsTolerance(bluebox, 13387839, getClientBounds(), 0, colorSetting(2,0, 0)) then
+    begin
+    blueboxes := ClusterTPA(bluebox, 15);
+    writeln('found tpa');
+     ETL_DebugATPA(blueboxes);
+    end
+    end;
+  begin
+       etl_start();
+       Findtpa()
+  end.
+      </pre>
+    Changes made from the previous example:
+    - We declare our T2DPointArray as blueboxes
+    - Then we use ClusterTPA to seperate our blueboxTpa,
+    <pre class="codeblock brush: pas ">
+    ClusterTPA(tpa,15)
+    </pre>
+    The parameters are:
+    - The tpa you want to cluster and the distance apart from each other.
+    Result:
+    <a href="http://imgur.com/sr4444t"><img class="articleimage  " src="http://i.imgur.com/sr4444t.png"alt="" /></a>
+
+    Then if we want to sort the atpa by the largest first ,we have to add one line of code to our script
+    <pre class="codeblock brush: pas ">
+  blueboxes.sortBySize(true);
+  </pre>
+  The codes parameters are:
+  - The atpa you want to sort and if you want to sort by largest first.
+  The complete code should look like this.
+  <pre class="codeblock brush: pas ">
+    program findTpointArray;
+    {$i Srl-6/srl.simba}
+    {$i ETl_Lape.simba}
+    procedure findtpa();
+    var
+      bluebox: TPointArray;
+      blueboxes: T2DPointArray;
+    begin
+      if FindColorsTolerance(bluebox, 13387839, getClientBounds(), 0, colorSetting(2,0, 0)) then
+      begin
+      blueboxes := ClusterTPA(bluebox, 15);
+      blueboxes.sortBySize(true);
+      writeln('found tpa');
+       ETL_DebugATPA(blueboxes);
+      end
+      end;
+    begin
+         etl_start();
+         Findtpa()
+    end.
+  </pre>
+  When we run the code notice the numbers, AKA the Tpa, have changed from the previous results.
+  before:
+  <a href="http://imgur.com/sr4444t"><img  class=" " src="http://i.imgur.com/sr4444t.png"  alt="" /></a>
+  After:
+  <a href="http://imgur.com/9h3wErL"><img class="articleimage  " src="http://i.imgur.com/9h3wErL.png"  alt="" /></a>
+   </section>
+   <span class="articleinfo">
+  <span class="articleStep"><a class="NavStep" name='SelectingArrays'> 4: Selecting Arrays</a></span>
+   Now that we know which tpa is which, after debugging with the etl include  , we can use a mouse procedure to move the mouse to the correct one.
+   <pre class="codeblock brush: pas ">
+  mouse(middletpa(blueboxes[0]),MOUSE_MOVE,MOUSE_ACCURATE);
+   </pre>
+    In the above code we use the mouse procedure, from section 1 ,but this time use the function middletpa.
+   The middletpa requires one parameter, the tpa you want to get the center point of.
+  In this case blueboxes with the index of 0, we get this number from the previous example.
+   Full code:
+   <pre class="codeblock brush: pas ">
+     program findTpointArray;
+   {$i Srl-6/srl.simba}
+   {$i ETl_Lape.simba}
+   procedure findtpa();
+   var
+     bluebox: TPointArray;
+     blueboxes: T2DPointArray;
+   begin
+     if FindColorsTolerance(bluebox, 13387839, getClientBounds(), 0, colorSetting(2,0, 0)) then
+     begin
+     blueboxes := ClusterTPA(bluebox, 15);
+     blueboxes.sortBySize(true);
+     writeln('found tpa');
+          mouse(middletpa(blueboxes[0]),MOUSE_MOVE,MOUSE_ACCURATE);
+     end
+     end;
+   begin
+        Findtpa()
+   end.
+   </pre>
+   Results:
+   <a href="http://imgur.com/sR8CAT1"><img  class="articleimage  " src="http://i.imgur.com/sR8CAT1.gif" alt="" /></a>
+  </span>
 
 <section class="articleinfo"><span id="comments">
 <h2 class="articleStep"> <a class="NavStep" name="comments">Comments<i class="fa fa-comments-o" aria-hidden="true"></i>
-</a></h2><span id="header"> Want to leave a comment? Visit <a href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/6"> this post's issue page on GitHub  <i class="fa fa-commenting" aria-hidden="true"></i></a> (you'll need a GitHub account).</span></span>
+</a></h2><span id="header"> Want to leave a comment? Visit <a href="https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/1"> this post's issue page on GitHub  <i class="fa fa-commenting" aria-hidden="true"></i></a> (you'll need a GitHub account).</span></span>
 </section>
 <script type="text/javascript">
 function loadComments(data) {
   for (var i=0; i<data.length; i++) {
       var cuser = data[i].user.login;
       var cuserlink = "https://www.github.com/" + data[i].user.login;
-      var clink = "https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/6#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+      var clink = "https://github.com/GoodGameScripts/GoodGameScripts.github.io/issues/1#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
       var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;
       var cdate =  moment(data[i].created_at).format("MM-DD-YYYY h:mm:ss");
@@ -389,7 +545,7 @@ function loadComments(data) {
     }
   }
 
- $.ajax("https://api.github.com/repos/GoodGameScripts/GoodGameScripts.github.io/issues/6/comments", {
+ $.ajax("https://api.github.com/repos/GoodGameScripts/GoodGameScripts.github.io/issues/1/comments", {
    headers: {Accept: "application/vnd.github.full+json"},
    success: function(msg){
      loadComments(msg);
@@ -402,7 +558,8 @@ function loadComments(data) {
 <div style="width:90%;margin: 0 auto;padding: 0 10px 10px 10px">
 <div style="float:right; padding-bottom:10px; "  >
     <i class="fa fa-tags" aria-hidden="true" style="color:#5ba1cf; margin-right: 5px;"></i>
-      <a href="/tags/simba/" class="blueclass" style="margin-right:5px;">Simba,</a>
+      <a href="/tags/tpoints/" class="blueclass" style="margin-right:5px;">Tpoints</a>
+      <a href="/tags/tpointarray/" class="blueclass" style="margin-right:5px;">TpointArray</a>
 
 </div>
 <span class="clr"></span>
